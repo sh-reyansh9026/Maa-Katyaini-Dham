@@ -91,6 +91,16 @@ const bookingLimiter = rateLimit({
 
 app.use('/api/bookings', bookingLimiter)
 
+// Root health check endpoint (for Render and other health checks)
+app.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Maa Katyaini Dham API Server',
+    version: '1.0.0',
+    timestamp: new Date().toISOString(),
+  })
+})
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.status(200).json({
