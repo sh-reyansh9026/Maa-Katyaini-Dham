@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme - Earthy, Warm Tones from Design */
+  --bg: #F5F5F0;
+  --surface: #FFFFFF;
+  --surface-alt: #E8E4D9;
+  --primary: #8B4513; /* Saddle Brown */
+  --primary-hover: #6B340E;
+  --primary-fg: #FFFFFF;
+  --accent: #D2691E; /* Chocolate/Orange Brown */
+  --accent-soft: #FFF8DC; /* Cornsilk */
+  --text: #2C2416; /* Dark Brown */
+  --muted: #6B5D4F;
+  --border: #D4C4A8;
+  --success: #228B22; /* Forest Green */
+  --warning: #DAA520; /* Goldenrod */
+  --danger: #A52A2A; /* Brown Red */
+  --neutral: #8B7355;
+}
+
+.dark {
+  /* Dark Theme */
+  --bg: #1A1612;
+  --surface: #2C2416;
+  --surface-alt: #3D3020;
+  --primary: #CD853F; /* Peru */
+  --primary-hover: #DEB887;
+  --primary-fg: #1A1612;
+  --accent: #FFA07A; /* Light Salmon */
+  --accent-soft: #2C2416;
+  --text: #F5F5F0;
+  --muted: #B8A888;
+  --border: #4A3C2A;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text;
+  }
+}
